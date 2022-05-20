@@ -1,0 +1,593 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    color: #222222;
+}
+
+/* Inicio de Animacion Expansion de Imagenes de la pagina */
+
+.imagenes {
+    transition: transform .3s; /* Animation */	
+}
+  
+.imagenes:hover {
+    transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+/* Fin de Animacion Expansion de Imagenes de la pagina */
+
+/* Inicio de Animacion Hover para las Imagenes de la pagina */
+
+.hover-galeria {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    color: #ffff;
+    
+    transform: scale(0); 
+    background: hsla(310, 41%, 45%, 0.24);
+    transition: transform .5s;
+    
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 10px;
+}
+
+.imagenes:hover .hover-galeria {
+    transform: scale(1);
+}
+
+/* Fin de Animacion Hover para las Imagenes de la pagina */
+
+/* comienza clases reutilizables */
+
+.btn-rojo {
+    /* Botones */
+    margin: 0px 5px 40px 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #fb2056;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    display: inline-block;
+
+    /* Aplica para Flexbox */
+    align-self: center;
+}
+
+.frase {
+    text-align: center;
+}
+
+/* terminan clases reutilizables */
+
+/* comienza primera sección */
+
+#primera-seccion {
+    background: linear-gradient(rgba(245, 34, 182, 0.35), rgba(38,2,2,0.446)), url(file:///C:/Users/Jos%C3%A9%20Luis/Documents/Escritorio%20JL/Github/3er-Proyecto/fondo-primera.jpg) no-repeat center/cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: rgb(255, 255, 255);
+}
+
+/* Inicio Barra de Navegación */
+
+#barra-navegacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#logo {
+    margin: 40px;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    font-stretch: wider;
+}
+
+nav {
+    margin: 40px;
+}
+
+nav > a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem
+}
+
+nav > a:hover {
+    color: #fb2056;
+}
+
+.text-box{
+    overflow-x: hidden;
+    padding: 10px;
+  }
+  
+  .text-box h2 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    position: relative;
+  }
+  
+  .text-box h2::before, h2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  
+  .text-box h2::before {
+    background: #d132c4f3;
+    animation:  type 3s steps(25) 1s forwards infinite;
+    width: 100%;
+  }
+  .text-box span{
+    color: #fb2056;
+    font-weight: 900;
+    font-size: 35px;
+  }
+  .text-box h2::after {
+    opacity: 1;
+    width: 2px; 
+    background: #fff;
+    color:#fff;
+    animation:  type 3s steps(25) 1s forwards infinite,
+                blink 0.6s steps(15) infinite;
+  }
+  
+  
+  @keyframes type {
+    to {
+      left: 110%;
+    }
+  }
+  
+  @keyframes blink {
+    0% , 50%{
+      opacity: 0;
+    } 
+    51%, 100% {
+       opacity: 1;
+    }
+  }
+
+/* Fin Barra de Navegación */
+
+#primera-seccion-contenido {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#primera-seccion-contenido > p {
+     /* Preguntas */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#primera-seccion-contenido > hr {
+     /* Subrayado */
+    width: 10.5rem;
+    height: 2px;
+    background:#fb2056;
+    border-color: #fb2056;
+}
+
+#primera-seccion-contenido > h1 {
+    /* Etiqueta Vamos de Paseo */
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 100px;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+/* termina primera sección */
+
+/* comienza segunda sección */
+
+#segunda-seccion {
+    height: 60px;
+    background-color: #d385ed;
+    color: white;
+    font-size: 35px;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+/* termina segunda sección */
+
+/* comienza tercera sección */
+
+#tercera-seccion {
+    height: 130vh;
+    margin: 5px 60px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding-bottom: 1.5rem;
+}
+
+#titulo {
+    margin-bottom: 1rem;
+}
+
+#titulo > h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 60px 10px 10px 10px;
+}
+
+#titulo > hr {
+    width: 4.5rem;
+    border-color: #fb2056;
+}
+
+#container-tercera-seccion {
+    height: 600px;
+    text-align: center;
+    flex: 1.1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px 10px;
+    justify-items: center;
+}
+
+.video {
+    width: 500px;
+    height: 300px;
+}
+
+.imagenes {
+    border: #000 8px solid;
+    transition: transform .3s; /* Animation */
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.texto-tercera {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.texto-tercera > h6 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 20px;
+}
+
+.texto-tercera > p {
+    margin-bottom: 1rem;
+}
+
+/* termina tercera sección */
+
+/* comienza cuarta sección */
+
+    #cuarta-seccion{
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.905)), url(../3er-Proyecto/fondo_cuarta.jpg) no-repeat center/cover;
+        background-attachment: fixed;
+        height: 110vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contenedor {
+        width: 95%;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #cuarta-seccion-izq img {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: center;
+        justify-content: flex-start;
+        text-align: center;
+        align-items: center;
+        object-fit: cover;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex-item1 {
+        background-color: white;
+        width: 200px;
+        margin: 10px;
+        margin-bottom: 15px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 50px;
+    }
+
+    .mitad {
+        width: 50%;
+    }
+
+    #cuarta-seccion-der  {
+        margin-left: 50px;
+    }
+
+    #cuarta-seccion-der > h3 {
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    #cuarta-seccion-der > hr {
+        width: 4.5rem;
+        border-color: #fb2056;
+        margin-left: 0;
+        margin-bottom: 3rem;
+    }
+
+    #cuarta-seccion-der > p {
+        margin-bottom: 2rem;
+    }
+
+/* termina cuarta sección */
+
+/* comienza quinta sección */
+
+#quinta-seccion {
+    height: 100vh;
+    width: 90%;
+    margin: 0px 35px 5px 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#quinta-seccion-izquierda {
+    flex: 1;
+    padding: 40px;
+}
+
+#quinta-seccion-izquierda > h3 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+#quinta-seccion-izquierda > hr {
+    width: 4.5rem;
+    border-color: #fb2056;
+    margin-left: 0;
+    margin-bottom: 3rem;
+}
+
+#quinta-seccion-izquierda > p {
+    margin-bottom: 4rem;
+}
+
+#quinta-seccion-derecha {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.imagenes {
+    max-width: 100%;
+}
+
+.imagenes .quinta {
+    width: 360px;
+    height: 250px;
+}
+
+/* termina quinta sección */
+
+/* Footer */
+
+#container-footer{
+    background-color: #d385ed;
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    color: white;
+    font-size: 22px;
+    padding: 5px 10px;
+    height: 180px;
+}
+    
+.contenidofooter p{
+    margin: 5px 5px 5px 60px;
+    padding: 5px;
+    font-size: 25px;
+    align-items: center;
+    justify-content:flex-end;
+}
+
+.RRSSfooter{
+    display: flex;  
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content:flex-end;
+}
+.RRSSfooter p {
+    margin: 25px;
+    margin-right: 50px;
+}
+
+.blue-color {
+    color:blue;
+}
+ 
+.green-color {
+    color:green;
+}
+ 
+.teal-color {
+    color:teal;
+}
+
+.yellow-color {
+color:yellow;
+}
+
+.red-color {
+    color:red;
+}
+    
+ /*Tablets*/
+@media (max-width: 1048px) {
+    #menu ul a {
+    font-size: 25px;    
+    }  
+}
+
+.hover-galeria {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    color: #ffff;
+    transform: scale(0); 
+    background: hsla(4, 96%, 31%, 0.384);
+    transition: transform .5s;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img:hover .hover-galeria {
+    transform: scale(1);
+}
+
+/* Termina Footer */
+
+/* ################################################################ */
+/* ################################################################ */
+/* ################################################################ */
+/* ################################################################ */
+/* ################################################################ */
+
+@media(max-width:522px){
+    #primera-seccion{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #barra-navegacion{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        padding-top: 2rem;
+        padding-bottom: 0;
+    }
+
+    #barra-navegacion > p,
+    nav {
+        text-align: center;
+    }
+
+    #primera-seccion-contenido{
+        margin-top: 2.5rem;
+    }
+
+    #primera-seccion-contenido > h1{
+        font-size: 2.5rem;
+    }
+
+    /*Tercera seccion*/
+
+    #tercera-seccion {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        width: 90%;
+    } 
+
+    #container-tercera-seccion {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .img-tercera {
+        margin-bottom: 2rem;
+    }
+
+    .img-tercera > img {
+        max-width: 100%;
+    }
+
+    /*Cuarta Seccion*/
+
+    #cuarta-seccion-izq {
+        display: none;
+    }
+
+    #cuarta-seccion-der{
+        width: 100%;
+    }
+
+    /*Quinta Seccion*/
+    #quinta-seccion {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    #quinta-seccion-derecha{
+        flex: 1;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        gap: 15px 10px;
+        justify-items: center;
+        align-items: center;
+    }
+}
