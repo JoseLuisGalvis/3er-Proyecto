@@ -71,7 +71,7 @@ body {
 /* comienza primera sección */
 
 #primera-seccion {
-    background: linear-gradient(rgba(245, 34, 182, 0.35), rgba(38,2,2,0.446)), url(file:///C:/Users/Jos%C3%A9%20Luis/Documents/Escritorio%20JL/Github/3er-Proyecto/fondo-primera.jpg) no-repeat center/cover;
+    background: linear-gradient(rgba(245, 34, 182, 0.35), rgba(38,2,2,0.446)), url(../3er-Proyecto/fondo-primera.jpg) no-repeat center/cover;
     background-attachment: fixed;
     height: 100vh;
     color: rgb(255, 255, 255);
